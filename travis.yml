@@ -1,0 +1,10 @@
+language: python
+
+python:
+  - "2.7"
+
+install:
+  - pip install .
+  - pip install -r requirments.txt
+
+script: nosetests  -v --processes=10 --process-timeout=12
