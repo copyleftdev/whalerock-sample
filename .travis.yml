@@ -6,4 +6,4 @@ python:
 install:
   - pip install -r requirments.txt
 
-script: nosetests  -v --processes=2 --process-timeout=12
+script: nosetests
