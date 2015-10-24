@@ -1,0 +1,3 @@
+nosetest
+requests
+selenium
