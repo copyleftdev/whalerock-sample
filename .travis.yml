@@ -9,4 +9,4 @@ addons:
 install:
   - pip install -r requirments.txt
 
-script: nosetests4
+script: nosetests
