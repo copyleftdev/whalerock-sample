@@ -12,6 +12,13 @@ class SmokeTestWhaleRockCorpSite(unittest.TestCase):
     def setUp(self):
         self.driver =webdriver.Firefox()
 
+    def test_no_cache_true(self):
+        base_url = "http://www.whalerockindustries.com/"
+        r = requests.get(base_url)
+        cache_check = r.headers.get('Cache-Control')
+        self.assertEquals(cache_check, "no-cache")
+
+
     def test_javascript_cdn_payload(self):
         base_cdn_url = "http://cdnjs.cloudflare.com"
         js_assets = ['/ajax/libs/modernizr/2.7.1/modernizr.min.js','/ajax/libs/jquery/1.11.2/jquery.min.js']
