@@ -19,6 +19,7 @@ class SecuritySmokeTestMovieFone(unittest.TestCase):
         driver.get(base_url)
         self.assertEquals(driver.title, page_title)
 
+    @unittest.skip('Not ready for CI')
     def test_nav_to_theater_near_you_from_main(self):
         driver = self.driver
         target_url = "http://www.moviefone.com/showtimes/alhambra-ca/91801/theaters"
