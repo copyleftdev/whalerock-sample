@@ -21,12 +21,12 @@ class SecuritySmokeTestMovieFone(unittest.TestCase):
 
     def test_nav_to_theater_near_you_from_main(self):
         driver = self.driver
-        base_url = self.base_url
+        target_url = "http://www.moviefone.com/showtimes/alhambra-ca/91801/theaters"
         #movie time tickets css path
         mtt = "#header > div.desktop.header > div > ul > li:nth-child(1) > a"
         #theater near you path
         tny = "#header > div.desktop.header > div > ul > li:nth-child(1) > ul > li:nth-child(1) > a"
-        driver.get(base_url)
+        driver.get(target_url)
         mtt_ele = driver.find_element_by_css_selector(mtt)
         tny_ele = driver.find_element_by_css_selector(tny)
 
